@@ -38,7 +38,7 @@ function scripts() {
 
 // 4. Оптимізація зображень
 function images() {
-  return src('src/imgs/**/*')
+  return src('src/imgs/**/*' , {encoding: false})
     .pipe(imagemin())
     .pipe(dest('dist/imgs'))
     .pipe(browserSync.stream());
