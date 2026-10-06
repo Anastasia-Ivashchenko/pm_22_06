@@ -7,6 +7,17 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
+// Таски для Bootstrap (Лабораторна №2)
+function bootstrapCss() {
+  return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(dest('dist/css'));
+}
+
+function bootstrapJs() {
+  return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(dest('dist/js'));
+}
+
 // 1. Обробка HTML
 function html() {
   return src('src/*.html')
@@ -38,7 +49,7 @@ function scripts() {
 
 // 4. Оптимізація зображень
 function images() {
-  return src('src/imgs/**/*' , {encoding: false})
+  return src('src/imgs/**/*', { encoding: false })
     .pipe(imagemin())
     .pipe(dest('dist/imgs'))
     .pipe(browserSync.stream());
@@ -62,11 +73,17 @@ function watching() {
 }
 
 // Експорт тасків
+exports.bootstrapCss = bootstrapCss;
+exports.bootstrapJs = bootstrapJs;
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
 exports.watch = watching;
 
-// Основна таска за замовчуванням (npm start / gulp)
-exports.default = parallel(html, styles, scripts, images, server, watching);
+// Основна таска за замовчуванням
+exports.default = series(
+  parallel(bootstrapCss, bootstrapJs),
+  parallel(html, styles, scripts, images),
+  parallel(server, watching)
+);
