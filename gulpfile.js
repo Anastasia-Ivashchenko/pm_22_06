@@ -5,9 +5,10 @@ const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const rename = require('gulp-rename'); 
+const rename = require('gulp-rename'); // Додано для перейменування у index.min.css
 const browserSync = require('browser-sync').create();
 
+// Таски для Bootstrap (Лабораторна №2)
 function bootstrapCss() {
   return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
     .pipe(dest('dist/css'));

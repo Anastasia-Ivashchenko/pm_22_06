@@ -1,27 +1,32 @@
 @import 'variables';
-@import 'mixins';
 
 main {
   background-color: #ffffff;
-  padding: $base-spacing * 1.5;
+  padding: 1.5rem;
 
-  section {
-    margin-bottom: $base-spacing * 1.5;
-
-    h2 {
-      font-weight: 700;
-      color: $text-dark;
-    }
-
-    p {
-      color: $text-secondary;
-      line-height: 1.6;
-    }
+  .icon-circle {
+    width: 32px;
+    height: 32px;
+    background-color: $primary-teal;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    flex-shrink: 0;
   }
 
   .skill-bar-fill {
     height: 4px;
     border-radius: 50rem;
     background-color: $primary-teal;
+  }
+
+  .teal-bullet {
+  color: $primary-teal;
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 6px;
   }
 }
