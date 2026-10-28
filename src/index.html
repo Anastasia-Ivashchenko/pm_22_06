@@ -5,100 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noel Taylor - Resume</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS (скопійований Gulp-ом з node_modules) -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   
   <!-- Font Awesome для іконок -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Власні стилі -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* Кружечки для заголовків */
-    .icon-circle {
-      width: 36px;
-      height: 36px;
-      background-color: #00a896;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 16px;
-      flex-shrink: 0;
-    }
-  </style>
+  <!-- Скомпільовані та мініфіковані власні стилі з SCSS (index.min.css) -->
+  <link rel="stylesheet" href="css/index.min.css">
 </head>
 <body class="bg-light py-4">
 
-  <!-- Головна рамка макета -->
-  <div class="container bg-white shadow-lg p-3" style="max-width: 850px; border: 8px solid #00a896;">
-    <div class="row g-0 border">
+  <!-- Зовнішня бірюзова рамка макета -->
+  <div class="container bg-white shadow-lg p-0 overflow-hidden" style="max-width: 860px; border: 10px solid #00a896;">
+    <div class="row g-0">
       
-      <!-- ЛІВА КОЛОНКА (із вертикальною лінією border-end) -->
-      <aside class="col-md-5 p-4 text-center border-end border-2 border-secondary border-opacity-25" style="background-color: #d8ecec;">
-        <h1 class="h2 text-dark fw-bold mb-0" style="letter-spacing: 1px;">NOEL TAYLOR</h1>
-        <p class="text-muted small fw-semibold mb-4" style="letter-spacing: 1.5px;">GRAPHIC & WEB DESIGNER</p>
+      <!-- ЛІВА КОЛОНКА -->
+      <aside class="col-md-5 py-4 text-center border-end border-dark position-relative" style="background-color: #d8ecec;">
+        
+        <!-- Товста ліва біла вертикальна смуга (30px) -->
+        <div style="position: absolute; top: 0; left: 0; width: 30px; height: 100%; background-color: #ffffff;"></div>
 
-        <!-- Аватарка -->
-        <div class="d-flex justify-content-center mb-4">
-          <div class="rounded-circle p-2 bg-white shadow-sm" style="width: 170px; height: 170px;">
-            <img src="imgs/kon.jpg" alt="Noel Taylor" class="rounded-circle w-100 h-100" style="object-fit: cover;">
+        <!-- Товста права біла вертикальна смуга (30px) -->
+        <div style="position: absolute; top: 0; right: 0; width: 30px; height: 100%; background-color: #ffffff;"></div>
+
+        <!-- Вміст лівої колонки -->
+        <div style="position: relative; z-index: 2; padding-left: 20px; padding-right: 20px;">
+          
+          <h1 class="h2 text-dark fw-bold mb-0" style="letter-spacing: 1px;">NOEL TAYLOR</h1>
+          <p class="text-muted small fw-semibold mb-4" style="letter-spacing: 1px;">GRAPHIC & WEB DESIGNER</p>
+
+          <!-- Аватарка -->
+          <div class="d-flex justify-content-center mb-4">
+            <div class="rounded-circle p-2 bg-white shadow-sm" style="width: 175px; height: 175px;">
+              <img src="imgs/kon.jpg" alt="Noel Taylor" class="rounded-circle w-100 h-100" style="object-fit: cover;">
+            </div>
           </div>
-        </div>
 
-        <hr class="my-4 border-secondary opacity-50 mx-auto" style="width: 80%;">
-
-        <!-- CONTACT ME -->
-        <div class="mb-4">
-          <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2">
-            <span class="icon-circle"><i class="fa-solid fa-user"></i></span> CONTACT ME
-          </h2>
-          <ul class="list-unstyled small text-secondary mt-3 mb-0" style="font-size: 13px;">
-            <li class="mb-2"><i class="fa-solid fa-phone me-2 text-dark"></i> +1-718-310-5588</li>
-            <li class="mb-2"><i class="fa-solid fa-globe me-2 text-dark"></i> www.yourwebsite.com</li>
-            <li><i class="fa-solid fa-location-dot me-2 text-dark"></i> 769 PrudenceLincoln Park, MI</li>
-          </ul>
-        </div>
-
-        <hr class="my-4 border-secondary opacity-50 mx-auto" style="width: 80%;">
-
-        <!-- EDUCATION -->
-        <div class="mb-4">
-          <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2">
-            <span class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></span> EDUCATION
-          </h2>
-          <div class="mt-3">
-            <h3 class="fw-bold fs-6 mb-0">STANFORD UNIVERSITY</h3>
-            <p class="small text-muted mb-0">MASTER DEGREE GRADUATE</p>
-            <p class="small text-secondary">2011 - 2013</p>
+          <!-- CONTACT ME -->
+          <div class="mb-4">
+            <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2 mb-3">
+              <span class="icon-circle"><i class="fa-solid fa-user"></i></span> CONTACT ME
+            </h2>
+            <ul class="list-unstyled small text-secondary mb-0" style="font-size: 13px;">
+              <li class="mb-2 d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-phone text-dark" style="font-size: 11px;"></i> +1-718-310-5588
+              </li>
+              <li class="mb-2 d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-globe text-dark" style="font-size: 11px;"></i> www.yourwebsite.com
+              </li>
+              <li class="d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-location-dot text-dark" style="font-size: 11px;"></i> 769 PrudenceLincoln Park, MI
+              </li>
+            </ul>
           </div>
-          <div class="mt-3">
-            <h3 class="fw-bold fs-6 mb-0">UNIVERSITY OF CHICAGO</h3>
-            <p class="small text-muted mb-0">BACHELOR DEGREE GRADUATE</p>
-            <p class="small text-secondary">2007 - 2010</p>
+
+          <div class="sidebar-divider"></div>
+
+          <!-- EDUCATION -->
+          <div class="mb-4">
+            <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2 mb-3">
+              <span class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></span> EDUCATION
+            </h2>
+            <div class="mt-3">
+              <h3 class="fw-bold fs-6 mb-0">STANFORD UNIVERSITY</h3>
+              <p class="small text-muted mb-0">MASTER DEGREE GRADUATE</p>
+              <p class="small text-secondary">2011 - 2013</p>
+            </div>
+            <div class="mt-3">
+              <h3 class="fw-bold fs-6 mb-0">UNIVERSITY OF CHICAGO</h3>
+              <p class="small text-muted mb-0">BACHELOR DEGREE GRADUATE</p>
+              <p class="small text-secondary">2007 - 2010</p>
+            </div>
           </div>
-        </div>
 
-        <hr class="my-4 border-secondary opacity-50 mx-auto" style="width: 80%;">
+          <div class="sidebar-divider"></div>
 
-        <!-- REFERENCES -->
-        <div>
-          <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2">
-            <span class="icon-circle"><i class="fa-solid fa-users"></i></span> REFERENCES
-          </h2>
-          <div class="mt-3 small text-secondary">
-            <p class="fw-bold text-dark mb-0">DARWIN B. MAGANA</p>
-            <p class="mb-0">2813 Shobe Lane Mancos, CO.</p>
-            <p class="mb-0">Tel: +1-970-533-3393</p>
-            <p class="mb-3">Email: www.yourwebsite.com</p>
+          <!-- REFERENCES -->
+          <div class="mb-3">
+            <h2 class="h6 fw-bold text-dark d-flex align-items-center justify-content-center gap-2 mb-3">
+              <span class="icon-circle"><i class="fa-solid fa-users"></i></span> REFERENCES
+            </h2>
+            <div class="mt-3 small text-secondary">
+              <p class="fw-bold text-dark mb-0">DARWIN B. MAGANA</p>
+              <p class="mb-0">2813 Shobe Lane Mancos, CO.</p>
+              <p class="mb-0">Tel: +1-970-533-3393</p>
+              <p class="mb-3">Email: www.yourwebsite.com</p>
 
-            <p class="fw-bold text-dark mb-0">ROBERT J. BELVIN</p>
-            <p class="mb-0">2119 Fairfax Drive Newark, NJ.</p>
-            <p class="mb-0">Tel: +1-908-987-5103</p>
-            <p class="mb-0">Email: www.yourwebsite.com</p>
+              <p class="fw-bold text-dark mb-0">ROBERT J. BELVIN</p>
+              <p class="mb-0">2119 Fairfax Drive Newark, NJ.</p>
+              <p class="mb-0">Tel: +1-908-987-5103</p>
+              <p class="mb-0">Email: www.yourwebsite.com</p>
+            </div>
           </div>
+
         </div>
       </aside>
 
@@ -108,14 +108,14 @@
         <!-- ABOUT ME -->
         <section class="mb-4">
           <h2 class="h5 fw-bold text-dark d-flex align-items-center gap-2">
-            <span class="icon-circle"><i class="fa-solid fa-user-large"></i></span> ABOUT ME
+            <span class="icon-circle"><i class="fa-solid fa-user"></i></span> ABOUT ME
           </h2>
           <p class="text-secondary small mt-3" style="text-align: justify; line-height: 1.6;">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
         </section>
 
-        <hr class="my-4">
+        <hr class="my-4 border-dark opacity-75">
 
         <!-- JOB EXPERIENCE -->
         <section class="mb-4">
@@ -151,7 +151,7 @@
           </div>
         </section>
 
-        <hr class="my-4">
+        <hr class="my-4 border-dark opacity-75">
 
         <!-- SKILLS -->
         <section class="mb-4">
@@ -163,65 +163,81 @@
             <div class="col-6 d-flex align-items-center">
               <span class="fw-bold text-nowrap" style="width: 130px;">Adobe Photoshop</span>
               <div class="border border-secondary rounded-pill p-1 bg-white flex-grow-1 d-flex align-items-center" style="height: 12px; max-width: 100px;">
-                <div class="rounded-pill" style="width: 80%; background-color: #00a896; height: 4px;"></div>
+                <div class="rounded-pill skill-bar-fill" style="width: 80%;"></div>
               </div>
             </div>
 
             <div class="col-6 d-flex align-items-center">
               <span class="fw-bold text-nowrap" style="width: 130px;">Adobe Illustrator</span>
               <div class="border border-secondary rounded-pill p-1 bg-white flex-grow-1 d-flex align-items-center" style="height: 12px; max-width: 100px;">
-                <div class="rounded-pill" style="width: 75%; background-color: #00a896; height: 4px;"></div>
+                <div class="rounded-pill skill-bar-fill" style="width: 75%;"></div>
               </div>
             </div>
 
             <div class="col-6 d-flex align-items-center">
               <span class="fw-bold text-nowrap" style="width: 130px;">Microsoft Word</span>
               <div class="border border-secondary rounded-pill p-1 bg-white flex-grow-1 d-flex align-items-center" style="height: 12px; max-width: 100px;">
-                <div class="rounded-pill" style="width: 90%; background-color: #00a896; height: 4px;"></div>
+                <div class="rounded-pill skill-bar-fill" style="width: 90%;"></div>
               </div>
             </div>
 
             <div class="col-6 d-flex align-items-center">
               <span class="fw-bold text-nowrap" style="width: 130px;">Microsoft Powerpoint</span>
               <div class="border border-secondary rounded-pill p-1 bg-white flex-grow-1 d-flex align-items-center" style="height: 12px; max-width: 100px;">
-                <div class="rounded-pill" style="width: 85%; background-color: #00a896; height: 4px;"></div>
+                <div class="rounded-pill skill-bar-fill" style="width: 85%;"></div>
               </div>
             </div>
 
             <div class="col-6 d-flex align-items-center">
-              <span class="fw-bold text-nowrap" style="width: 130px;">HTML-S/CSS-3</span>
+              <span class="fw-bold text-nowrap" style="width: 130px;">HTML-5/CSS-3</span>
               <div class="border border-secondary rounded-pill p-1 bg-white flex-grow-1 d-flex align-items-center" style="height: 12px; max-width: 100px;">
-                <div class="rounded-pill" style="width: 70%; background-color: #00a896; height: 4px;"></div>
+                <div class="rounded-pill skill-bar-fill" style="width: 70%;"></div>
               </div>
             </div>
 
           </div>
         </section>
 
-        <hr class="my-4">
+        <hr class="my-4 border-dark opacity-75">
 
         <!-- LANGUAGE & HOBBIES -->
         <div class="row">
+          <!-- LANGUAGE -->
           <div class="col-6">
-            <h2 class="h6 fw-bold text-dark d-flex align-items-center gap-2">
+            <h2 class="h6 fw-bold text-dark d-flex align-items-center gap-2 mb-3">
               <span class="icon-circle"><i class="fa-solid fa-globe"></i></span> LANGUAGE
             </h2>
-            <div class="row g-2 mt-2 small text-secondary fw-semibold">
-              <div class="col-6">• ENGLISH</div>
-              <div class="col-6">• SPANISH</div>
-              <div class="col-6">• FRENCH</div>
-              <div class="col-6">• GERMAN</div>
+            <div class="row g-2 small text-secondary fw-bold" style="font-size: 12px;">
+              <div class="col-6 d-flex align-items-center">
+                <span class="teal-bullet">•</span> ENGLISH
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <span class="teal-bullet">•</span> SPANISH
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <span class="teal-bullet">•</span> FRENCH
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <span class="teal-bullet">•</span> GERMAN
+              </div>
             </div>
           </div>
 
+          <!-- HOBBIES -->
           <div class="col-6">
-            <h2 class="h6 fw-bold text-dark d-flex align-items-center gap-2">
+            <h2 class="h6 fw-bold text-dark d-flex align-items-center gap-2 mb-3">
               <span class="icon-circle"><i class="fa-solid fa-flag"></i></span> HOBBIES
             </h2>
-            <div class="row g-2 mt-2 small text-secondary fw-semibold">
-              <div class="col-12">• READING BOOKS</div>
-              <div class="col-12">• TRAVELING</div>
-              <div class="col-12">• PLAYING CHESS</div>
+            <div class="row g-2 small text-secondary fw-bold" style="font-size: 12px;">
+              <div class="col-12 d-flex align-items-center">
+                <span class="teal-bullet">•</span> READING BOOKS
+              </div>
+              <div class="col-12 d-flex align-items-center">
+                <span class="teal-bullet">•</span> TRAVELING
+              </div>
+              <div class="col-12 d-flex align-items-center">
+                <span class="teal-bullet">•</span> PLAYING CHESS
+              </div>
             </div>
           </div>
         </div>

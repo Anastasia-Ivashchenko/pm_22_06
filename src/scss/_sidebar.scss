@@ -1,0 +1,40 @@
+@import 'variables';
+@import 'mixins';
+
+// Базовий селектор для наслідування (@extend)
+%section-title {
+  font-weight: 700;
+  color: $text-dark;
+  letter-spacing: 1px;
+}
+
+aside {
+  background-color: $bg-teal-light;
+  padding: $base-spacing * 1.5; // Математична операція для відступу
+  position: relative;
+  
+  // Вкладеність селекторів
+  .icon-circle {
+    width: 32px;
+    height: 32px;
+    background-color: $primary-teal;
+    border-radius: 50%;
+    @include flex-center(row, 0); // Підключення міксіна
+    color: #ffffff;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  h2 {
+    @extend %section-title; // Наслідування стилів
+    font-size: 0.9rem;
+    margin-bottom: $base-spacing;
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    background-color: #555555;
+    width: 80%;
+    margin: ($base-spacing * 1.5) auto; // Математична операція
+  }
+}

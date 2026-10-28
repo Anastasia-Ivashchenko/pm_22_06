@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'mixins';
+
+main {
+  background-color: #ffffff;
+  padding: $base-spacing * 1.5;
+
+  section {
+    margin-bottom: $base-spacing * 1.5;
+
+    h2 {
+      font-weight: 700;
+      color: $text-dark;
+    }
+
+    p {
+      color: $text-secondary;
+      line-height: 1.6;
+    }
+  }
+
+  .skill-bar-fill {
+    height: 4px;
+    border-radius: 50rem;
+    background-color: $primary-teal;
+  }
+}

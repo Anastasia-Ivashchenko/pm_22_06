@@ -5,6 +5,7 @@ const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename'); // Додано для перейменування у index.min.css
 const browserSync = require('browser-sync').create();
 
 // Таски для Bootstrap (Лабораторна №2)
@@ -29,11 +30,12 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// 2. Компіляція SCSS у CSS з мініфікацією
+// 2. Компiляція SCSS у CSS (Лабораторна №3: беремо main.scss і робимо index.min.css)
 function styles() {
-  return src('src/scss/**/*.scss')
+  return src('src/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
+    .pipe(rename('index.min.css')) // Обов'язкова вимога ЛР3
     .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
 }
@@ -67,7 +69,7 @@ function server() {
 // 6. Створення Watcher (відслідковування змін)
 function watching() {
   watch(['src/*.html', 'src/app/**/*.html'], html);
-  watch(['src/scss/**/*.scss'], styles);
+  watch(['src/scss/**/*.scss'], styles); // Стежить за будь-якими змінами в SCSS файлах
   watch(['src/js/**/*.js'], scripts);
   watch(['src/imgs/**/*'], images);
 }
