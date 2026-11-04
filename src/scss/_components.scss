@@ -1,0 +1,8 @@
+// Іконки використовуються і в сайдбарі, і в контенті
+.section-icon {
+  @include icon-image($icon-size);
+}
+
+.mini-icon {
+  @include icon-image($mini-icon-size);
+}

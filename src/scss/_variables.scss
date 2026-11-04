@@ -1,6 +1,49 @@
+// Кольори
 $primary-teal: #00a896;
 $bg-teal-light: #d8ecec;
 $text-dark: #212529;
 $text-secondary: #6c757d;
-$base-spacing: 1rem;
+$white: #ffffff;
+$divider-color: #555555;
+
+// Шрифти
 $font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-size-title-lg: 1.25rem;
+$font-size-title: 1rem;
+$font-size-contact: 13px;
+$font-size-small: 12px;
+$font-size-bullet: 16px;
+$letter-spacing: 1px;
+$line-height-text: 1.6;
+
+// Відступи
+$base-spacing: 1rem;
+$gap-small: $base-spacing * 0.5;
+$bullet-gap: 6px;
+$sidebar-inner-padding: $base-spacing * 1.25;   // = 20px
+
+// Розміри
+$icon-size: 32px;
+$mini-icon-size: $icon-size * 0.5;              // = 16px
+$resume-max-width: 860px;
+$resume-border-width: 10px;
+$stripe-width: 30px;
+$avatar-size: 175px;
+$skill-bar-height: 4px;
+$skill-label-width: 130px;
+$skill-track-height: 12px;
+$skill-track-max-width: 100px;
+$divider-width: 100% - 20%;                     // = 80%
+$divider-height: 1px;
+
+// Рівні навичок (для генерації класів циклом)
+$skill-levels: 70, 75, 80, 85, 90;
+
+// Брейкпоінти
+$breakpoints: (
+  'tablet': 767.98px,
+  'mobile': 575.98px
+);
+
+$content-padding-y: $base-spacing * 1.5;
+$content-padding-x: $base-spacing * 2;

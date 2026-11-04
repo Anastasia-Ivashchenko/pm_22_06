@@ -1,0 +1,9 @@
+.resume-container {
+  max-width: $resume-max-width;
+  background-color: $white;
+  border: $resume-border-width solid $primary-teal;
+
+  @include respond-to('mobile') {
+    border-width: $resume-border-width * 0.5;
+  }
+}

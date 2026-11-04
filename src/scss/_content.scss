@@ -1,32 +1,78 @@
-@import 'variables';
+// `.row > main` специфічніший за `.row > *` з Bootstrap, тому бічні відступи не обнуляються
+.row > main {
+  padding: $content-padding-y $content-padding-x;
+}
 
 main {
-  background-color: #ffffff;
-  padding: 1.5rem;
+  background-color: $white;
 
-  .icon-circle {
-    width: 32px;
-    height: 32px;
-    background-color: $primary-teal;
-    border-radius: 50%;
-    display: inline-flex;
+  h2 {
+    @extend %section-title;
+    @include section-heading(flex-start);
+    font-size: $font-size-title-lg;
+    margin-bottom: $base-spacing * 0.5;
+
+    &.heading-sm {
+      font-size: $font-size-title;
+      margin-bottom: $base-spacing;
+    }
+  }
+
+  .section-divider {
+    margin: ($base-spacing * 1.5) 0;
+    border: 0;
+    border-top: $divider-height solid $text-dark;
+    opacity: 0.75;
+  }
+
+  .about-text {
+    text-align: justify;
+    line-height: $line-height-text;
+  }
+
+  // ----- Навички -----
+  .skills-grid {
+    font-size: $font-size-small;
+  }
+
+  .skill-name {
+    width: $skill-label-width;
+  }
+
+  .skill-track {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 14px;
-    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: $skill-track-max-width;
+    height: $skill-track-height;
+    padding: $base-spacing * 0.25;
+    background-color: $white;
+    border: $divider-height solid $text-secondary;
+    border-radius: 50rem;
   }
 
   .skill-bar-fill {
-    height: 4px;
+    height: $skill-bar-height;
     border-radius: 50rem;
     background-color: $primary-teal;
   }
 
+  // Генерує .skill-70, .skill-75 ... з $skill-levels
+  @each $level in $skill-levels {
+    .skill-#{$level} {
+      width: $level * 1%;
+    }
+  }
+
+  // ----- Мови та хобі -----
+  .compact-list {
+    font-size: $font-size-small;
+  }
+
   .teal-bullet {
-  color: $primary-teal;
-  font-size: 16px;
-  line-height: 1;
-  margin-right: 6px;
+    margin-right: $bullet-gap;
+    font-size: $font-size-bullet;
+    line-height: 1;
+    color: $primary-teal;
   }
 }

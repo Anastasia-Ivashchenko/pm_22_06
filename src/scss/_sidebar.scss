@@ -1,38 +1,64 @@
-@import 'variables';
-@import 'mixins';
-
-%section-title {
-  font-weight: 700;
-  color: $text-dark;
-  letter-spacing: 1px;
-}
-
 aside {
-  background-color: $bg-teal-light;
-  padding: $base-spacing * 1.5;
   position: relative;
-  
-  .icon-circle {
-    width: 32px;
-    height: 32px;
-    background-color: $primary-teal;
-    border-radius: 50%;
-    @include flex-center(row, 0);
-    color: #ffffff;
-    font-size: 14px;
-    flex-shrink: 0;
+  background-color: $bg-teal-light;
+  border-right: $divider-height solid $text-dark;
+
+  @include respond-to('tablet') {
+    border-right: 0;
+  }
+
+  // Білі вертикальні смуги по краях
+  .sidebar-stripe {
+    position: absolute;
+    top: 0;
+    width: $stripe-width;
+    height: 100%;
+    background-color: $white;
+
+    &--left  { left: 0; }
+    &--right { right: 0; }
+  }
+
+  .sidebar-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 $sidebar-inner-padding;
+  }
+
+  .resume-name,
+  .resume-subtitle {
+    letter-spacing: $letter-spacing;
+  }
+
+  .avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    background-color: $white;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .contact-list {
+    font-size: $font-size-contact;
+
+    li {
+      @include flex-center(row, $gap-small);
+    }
   }
 
   h2 {
     @extend %section-title;
-    font-size: 0.9rem;
+    @include section-heading(center);
+    font-size: $font-size-title;
     margin-bottom: $base-spacing;
   }
 
   .sidebar-divider {
-    height: 1px;
-    background-color: #555555;
-    width: 80%;
+    width: $divider-width;
+    height: $divider-height;
     margin: ($base-spacing * 1.5) auto;
+    background-color: $divider-color;
   }
 }
