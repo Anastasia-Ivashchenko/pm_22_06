@@ -1,5 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+
 aside {
   position: relative;
+  padding-top: $sidebar-padding-top;
+  padding-bottom: $sidebar-padding-bottom;
   background-color: $bg-teal-light;
   border-right: $divider-height solid $text-dark;
 
@@ -11,28 +17,41 @@ aside {
   .sidebar-stripe {
     position: absolute;
     top: 0;
-    width: $stripe-width;
     height: 100%;
     background-color: $white;
 
-    &--left  { left: 0; }
-    &--right { right: 0; }
+    &--left  { left: 0;  width: $stripe-width-left; }
+    &--right { right: 0; width: $stripe-width-right; }
   }
 
+  // Вміст центрується по бірюзовому блоку, а не по всій колонці
   .sidebar-content {
     position: relative;
     z-index: 2;
-    padding: 0 $sidebar-inner-padding;
+    padding: 0 $stripe-width-right 0 $stripe-width-left;
   }
 
-  .resume-name,
+  .profile {
+    margin-bottom: $profile-gap;
+  }
+
+  .resume-name {
+    font-size: $font-size-name;
+    font-weight: $font-weight-extrabold;
+    line-height: 1.1;
+    letter-spacing: $letter-spacing-name;
+  }
+
   .resume-subtitle {
-    letter-spacing: $letter-spacing;
+    margin-bottom: $subtitle-gap;
+    font-size: $font-size-subtitle;
+    letter-spacing: $letter-spacing-subtitle;
   }
 
   .avatar {
     width: $avatar-size;
     height: $avatar-size;
+    padding: $avatar-ring;
     background-color: $white;
 
     img {
@@ -40,25 +59,33 @@ aside {
     }
   }
 
-  .contact-list {
-    font-size: $font-size-contact;
-
-    li {
-      @include flex-center(row, $gap-small);
-    }
-  }
-
   h2 {
     @extend %section-title;
     @include section-heading(center);
-    font-size: $font-size-title;
-    margin-bottom: $base-spacing;
+    margin-bottom: $sidebar-heading-gap;
+  }
+
+  h3 {
+    @extend %item-title;
+    margin-bottom: $title-gap;
+  }
+
+  .contact-list li {
+    @include flex-center(row, $gap-small);
+  }
+
+  .info-block + .info-block {
+    margin-top: $block-gap;
+  }
+
+  .detail {
+    font-size: $font-size-small;
   }
 
   .sidebar-divider {
     width: $divider-width;
     height: $divider-height;
-    margin: ($base-spacing * 1.5) auto;
-    background-color: $divider-color;
+    margin: $section-gap auto;
+    background-color: $text-dark;
   }
 }

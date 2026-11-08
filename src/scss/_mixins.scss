@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'variables' as *;
+
 // Flex-центрування з необов'язковим gap
 @mixin flex-center($direction: row, $gap: 0) {
   display: flex;
@@ -17,16 +20,27 @@
   flex-shrink: 0;
 }
 
-// Заголовок секції: іконка + текст у ряд, з вирівнюванням на вибір
-@mixin section-heading($justify: flex-start, $gap: $gap-small) {
+// Заголовок секції: іконка + текст у ряд
+@mixin section-heading($justify: flex-start, $gap: $heading-icon-gap) {
   @include flex-center(row, $gap);
   justify-content: $justify;
 }
 
-// Адаптивність: підставляє медіазапит за назвою брейкпоінта
+// Адаптивність "до": max-width за назвою брейкпоінта
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Невідомий брейкпоінт: #{$breakpoint}";
+  }
+}
+
+// Адаптивність "від": min-width за назвою брейкпоінта
+@mixin respond-from($breakpoint) {
+  @if map.has-key($breakpoints-up, $breakpoint) {
+    @media (min-width: map.get($breakpoints-up, $breakpoint)) {
       @content;
     }
   } @else {

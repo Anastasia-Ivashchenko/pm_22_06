@@ -1,6 +1,10 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'placeholders';
+
 // `.row > main` специфічніший за `.row > *` з Bootstrap, тому бічні відступи не обнуляються
 .row > main {
-  padding: $content-padding-y $content-padding-x;
+  padding: $content-padding-top $content-padding-right $content-padding-bottom $content-padding-left;
 }
 
 main {
@@ -9,45 +13,72 @@ main {
   h2 {
     @extend %section-title;
     @include section-heading(flex-start);
-    font-size: $font-size-title-lg;
-    margin-bottom: $base-spacing * 0.5;
+    margin-bottom: $heading-gap;
+  }
 
-    &.heading-sm {
-      font-size: $font-size-title;
-      margin-bottom: $base-spacing;
-    }
+  h3 {
+    @extend %item-title;
   }
 
   .section-divider {
-    margin: ($base-spacing * 1.5) 0;
+    margin: $section-gap 0;
     border: 0;
     border-top: $divider-height solid $text-dark;
-    opacity: 0.75;
+    opacity: 1;
   }
 
+  // ----- About -----
   .about-text {
+    font-size: $font-size-about;
+    font-weight: $font-weight-light;
+    line-height: $line-height-about;
     text-align: justify;
-    line-height: $line-height-text;
   }
 
-  // ----- Навички -----
+  // ----- Job experience -----
+  .job-item {
+    margin-top: $item-gap;
+
+    &__period {
+      font-weight: $font-weight-medium;
+    }
+
+    &__company {
+      font-style: italic;
+    }
+
+    &__text {
+      margin-top: $text-gap;
+      font-size: $font-size-small;
+    }
+  }
+
+  // ----- Skills -----
   .skills-grid {
-    font-size: $font-size-small;
+    --bs-gutter-y: #{$skill-row-gap};
+    font-size: $font-size-xs;
   }
 
   .skill-name {
-    width: $skill-label-width;
+    flex: 0 0 $skill-label-width-first;
+   font-weight: $font-weight-semibold;
+   white-space: nowrap;
+  }
+
+  // Права колонка: ширше поле під довші назви
+  .skill-item:nth-child(even) .skill-name {
+   flex-basis: $skill-label-width-second;
   }
 
   .skill-track {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    max-width: $skill-track-max-width;
+    flex: 1 1 auto;
+    max-width: $skill-track-width;
     height: $skill-track-height;
-    padding: $base-spacing * 0.25;
+    padding: $skill-track-padding;
     background-color: $white;
-    border: $divider-height solid $text-secondary;
+    border: 1px solid $text-dark;
     border-radius: 50rem;
   }
 
@@ -64,15 +95,28 @@ main {
     }
   }
 
-  // ----- Мови та хобі -----
+  // ----- Language & Hobbies -----
   .compact-list {
+    --bs-gutter-y: #{$list-row-gap};
     font-size: $font-size-small;
+    font-weight: $font-weight-semibold;
+
+    &--language {
+      max-width: $language-list-width;
+    }
+  }
+
+  .compact-item {
+    display: flex;
+    align-items: center;
   }
 
   .teal-bullet {
+    flex-shrink: 0;
+    width: $bullet-size;
+    height: $bullet-size;
     margin-right: $bullet-gap;
-    font-size: $font-size-bullet;
-    line-height: 1;
-    color: $primary-teal;
+    border-radius: 50%;
+    background-color: $primary-teal;
   }
 }

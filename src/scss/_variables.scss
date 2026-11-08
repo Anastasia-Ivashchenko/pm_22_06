@@ -1,49 +1,90 @@
-// Кольори
+// ===== Кольори =====
 $primary-teal: #00a896;
-$bg-teal-light: #d8ecec;
+$bg-teal-light: #D0E4E4;
 $text-dark: #212529;
-$text-secondary: #6c757d;
 $white: #ffffff;
-$divider-color: #555555;
 
-// Шрифти
-$font-stack: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-$font-size-title-lg: 1.25rem;
-$font-size-title: 1rem;
-$font-size-contact: 13px;
-$font-size-small: 12px;
-$font-size-bullet: 16px;
-$letter-spacing: 1px;
-$line-height-text: 1.6;
+// ===== Шрифти =====
+$font-stack: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-// Відступи
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-extrabold: 800;
+
+$font-size-name: 2.5rem;
+$font-size-subtitle: 1rem;
+$font-size-title: 1.5rem;        // заголовки секцій
+$font-size-item-title: 1rem;     // h3
+$font-size-about: 0.85rem;
+$font-size-body: 0.875rem;
+$font-size-small: 0.8rem;
+$font-size-xs: 0.65rem;
+
+$line-height-base: 1.5;
+$line-height-about: 1.7;
+$line-height-title: 1.2;
+
+$letter-spacing-name: -1px;
+$letter-spacing-subtitle: 2px;
+$letter-spacing-title: 0;
+
+// ===== Відступи =====
 $base-spacing: 1rem;
 $gap-small: $base-spacing * 0.5;
-$bullet-gap: 6px;
-$sidebar-inner-padding: $base-spacing * 1.25;   // = 20px
+$heading-icon-gap: $base-spacing * 0.75;
+$heading-gap: $base-spacing * 1.4;
+$sidebar-heading-gap: $base-spacing * 0.8;
+$section-gap: $base-spacing * 2;
+$item-gap: $base-spacing * 1.65;
+$block-gap: $base-spacing * 0.8;
+$text-gap: $base-spacing * 0.75;
+$title-gap: $base-spacing * 0.25;
+$subtitle-gap: $base-spacing * 2.75;
+$profile-gap: $base-spacing * 3;
+$list-row-gap: $base-spacing * 0.8;
+$skill-row-gap: $base-spacing * 0.75;
+$bullet-gap: 8px;
 
-// Розміри
-$icon-size: 32px;
-$mini-icon-size: $icon-size * 0.5;              // = 16px
+$sidebar-padding-top: $base-spacing * 3.7;
+$sidebar-padding-bottom: $base-spacing * 3;
+$content-padding-top: $base-spacing * 4.2;
+$content-padding-bottom: $base-spacing * 3;
+$content-padding-left: $base-spacing * 2.6;
+$content-padding-right: $base-spacing * 2;
+
+// ===== Розміри =====
+$icon-size: 36px;
+$mini-icon-size: $icon-size * 0.6;
 $resume-max-width: 860px;
-$resume-border-width: 10px;
-$stripe-width: 30px;
-$avatar-size: 175px;
+$resume-border-width: 12px;
+$a4-ratio: 1.414;
+$sidebar-width: 46%;
+$stripe-width-left: 36px;
+$stripe-width-right: 45px;
+$avatar-size: 230px;
+$avatar-ring: 10px;
+$divider-width: 100% - 30%;       // = 70%
+$divider-height: 2px;
+$skill-label-width-first: 6.5rem;
+$skill-label-width-second: 7.25rem;
+$skill-track-width: 70px;
+$skill-track-height: 8px;
+$skill-track-padding: 1px;
 $skill-bar-height: 4px;
-$skill-label-width: 130px;
-$skill-track-height: 12px;
-$skill-track-max-width: 100px;
-$divider-width: 100% - 20%;                     // = 80%
-$divider-height: 1px;
+$bullet-size: 7px;
+$language-list-width: 11.5rem;
 
-// Рівні навичок (для генерації класів циклом)
+// ===== Рівні навичок (для генерації класів циклом) =====
 $skill-levels: 70, 75, 80, 85, 90;
 
-// Брейкпоінти
+// ===== Брейкпоінти =====
 $breakpoints: (
   'tablet': 767.98px,
   'mobile': 575.98px
 );
 
-$content-padding-y: $base-spacing * 1.5;
-$content-padding-x: $base-spacing * 2;
+$breakpoints-up: (
+  'tablet': 768px
+);
