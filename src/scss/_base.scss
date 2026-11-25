@@ -6,6 +6,8 @@ body {
   font-weight: $font-weight-regular;
   line-height: $line-height-base;
   color: $text-dark;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 
 h1,

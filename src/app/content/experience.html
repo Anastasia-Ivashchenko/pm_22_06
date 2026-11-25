@@ -1,9 +1,7 @@
 <section>
-  @@include('../components/section-title.html', {"icon": "icon-job_experience.jpg", "title": "JOB EXPERIENCE"})
+  @@include('../components/section-title-toggle.html', {"icon": "icon-job_experience.jpg", "title": "JOB EXPERIENCE", "target": "experience-body"})
 
-  @@include('../components/job-item.html', {"title": "SENIOR WEB DESIGNER", "period": "2020 -Present", "company": "Creative Agency / Chicago", "text": "Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when unknown printer took a galley of type."})
-
-  @@include('../components/job-item.html', {"title": "GRAPHIC DESIGNER", "period": "2015 -2020", "company": "Creative Market / Chicago", "text": "Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when unknown printer took a galley of type."})
-
-  @@include('../components/job-item.html', {"title": "MARKETING MANAGER", "period": "2013 -2015", "company": "Manufacturing Agency / NJ", "text": "Lorem Ipsum has been the industry's standard dummy text ever since 1500s, when unknown printer took a galley of type."})
+  <div class="section-body" id="experience-body">
+    <div id="experience-list"></div>
+  </div>
 </section>

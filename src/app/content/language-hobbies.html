@@ -1,23 +1,27 @@
-<section class="row g-0">
+<section class="lang-hobbies row g-0">
 
-  <div class="col-7">
-    @@include('../components/section-title.html', {"icon": "icon-language.jpg", "title": "LANGUAGE"})
+  <div class="col-7 lang-col">
+    @@include('../components/section-title-toggle.html', {"icon": "icon-language.jpg", "title": "LANGUAGE", "target": "language-body"})
 
-    <div class="compact-list compact-list--language row g-0">
-      <div class="col-6 compact-item"><span class="teal-bullet"></span>ENGLISH</div>
-      <div class="col-6 compact-item"><span class="teal-bullet"></span>SPANISH</div>
-      <div class="col-6 compact-item"><span class="teal-bullet"></span>FRENCH</div>
-      <div class="col-6 compact-item"><span class="teal-bullet"></span>GERMAN</div>
+    <div class="section-body" id="language-body">
+      <div class="compact-list compact-list--language row g-0">
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>ENGLISH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>SPANISH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>FRENCH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>GERMAN</div>
+      </div>
     </div>
   </div>
 
-  <div class="col-5">
-    @@include('../components/section-title.html', {"icon": "icon-hobbies.jpg", "title": "HOBBIES"})
+  <div class="col-5 hobbies-col">
+    @@include('../components/section-title-toggle.html', {"icon": "icon-hobbies.jpg", "title": "HOBBIES", "target": "hobbies-body"})
 
-    <div class="compact-list row g-0">
-      <div class="col-12 compact-item"><span class="teal-bullet"></span>READING BOOKS</div>
-      <div class="col-12 compact-item"><span class="teal-bullet"></span>TRAVELING</div>
-      <div class="col-12 compact-item"><span class="teal-bullet"></span>PLAYING CHESS</div>
+    <div class="section-body" id="hobbies-body">
+      <div class="compact-list row g-0">
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>READING BOOKS</div>
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>TRAVELING</div>
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>PLAYING CHESS</div>
+      </div>
     </div>
   </div>
 

@@ -1,15 +1,17 @@
 <section>
-  @@include('../components/section-title.html', {"icon": "icon-education.jpg", "title": "EDUCATION"})
+  @@include('../components/section-title-toggle.html', {"icon": "icon-education.jpg", "title": "EDUCATION", "target": "education-body"})
 
-  <div class="info-block">
-    <h3>STANFORD UNIVERSITY</h3>
-    <p class="detail">MASTER DEGREE GRADUATE</p>
-    <p class="detail">2011 - 2013</p>
-  </div>
+  <div class="section-body" id="education-body">
+    <div class="info-block">
+      <h3>STANFORD UNIVERSITY</h3>
+      <p class="detail">MASTER DEGREE GRADUATE</p>
+      <p class="detail">2011 - 2013</p>
+    </div>
 
-  <div class="info-block">
-    <h3>UNIVERSITY OF CHICAGO</h3>
-    <p class="detail">BACHELOR DEGREE GRADUATE</p>
-    <p class="detail">2007 - 2010</p>
+    <div class="info-block">
+      <h3>UNIVERSITY OF CHICAGO</h3>
+      <p class="detail">BACHELOR DEGREE GRADUATE</p>
+      <p class="detail">2007 - 2010</p>
+    </div>
   </div>
 </section>

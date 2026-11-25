@@ -1,11 +1,7 @@
 <section>
-  @@include('../components/section-title.html', {"icon": "icon-skills.jpg", "title": "SKILLS"})
+  @@include('../components/section-title-toggle.html', {"icon": "icon-skills.jpg", "title": "SKILLS", "target": "skills-body"})
 
-  <div class="skills-grid row g-0">
-    @@include('../components/skill-item.html', {"name": "Adobe Photoshop", "level": "80"})
-    @@include('../components/skill-item.html', {"name": "Adobe Illustrator", "level": "75"})
-    @@include('../components/skill-item.html', {"name": "Microsoft Word", "level": "90"})
-    @@include('../components/skill-item.html', {"name": "Microsoft Powerpoint", "level": "85"})
-    @@include('../components/skill-item.html', {"name": "HTML-5/CSS-3", "level": "70"})
+  <div class="section-body" id="skills-body">
+    <div class="skills-grid row g-0" id="skills-list"></div>
   </div>
 </section>

@@ -9,3 +9,38 @@
 .mini-icon {
   @include icon-image($mini-icon-size);
 }
+
+// ----- Згортання блоків -----
+.is-hidden {
+  display: none !important;
+}
+
+// Стрілка сама є кнопкою; шеврон малюється псевдоелементом
+.toggle-arrow {
+  position: relative;
+  flex-shrink: 0;
+  width: $toggle-size;
+  height: $toggle-size;
+  margin-left: $gap-small * -1;   // стрілка впритул до назви
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $arrow-size;
+    height: $arrow-size;
+    border: solid $text-dark;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, calc(-50% + 2px)) rotate(-135deg);  // розгорнуто: вгору
+    transition: transform 0.25s ease;
+  }
+
+  &.is-flipped::before {
+    transform: translate(-50%, calc(-50% - 2px)) rotate(45deg);    // згорнуто: вниз
+  }
+}
