@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noel Taylor - Resume</title>
+
+<!-- Шрифт Raleway -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS (скопійований Gulp-ом з node_modules) -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Власні стилі, зібрані з SCSS -->
+<link rel="stylesheet" href="css/index.min.css">
+</head>
+<body class="bg-light py-4">
+
+  <div class="container resume-container shadow-lg p-0 overflow-hidden">
+    <div class="row g-0">
+      <aside class="col-md-5 text-center">
+
+  <div class="sidebar-stripe sidebar-stripe--left"></div>
+  <div class="sidebar-stripe sidebar-stripe--right"></div>
+
+  <div class="sidebar-content">
+    <header class="profile">
+  <h1 class="resume-name" id="personName"></h1>
+  <p class="resume-subtitle">GRAPHIC &amp; WEB DESIGNER</p>
+
+  <div class="d-flex justify-content-center">
+    <div class="avatar rounded-circle">
+      <img src="imgs/kon.jpg" alt="Noel Taylor" class="rounded-circle w-100 h-100">
+    </div>
+  </div>
+</header>
+    <section>
+  <h2>
+  <img src="imgs/icon-contact_me.jpg" alt="" class="section-icon">
+  CONTACT ME
+</h2>
+
+  <ul class="contact-list list-unstyled mb-0">
+    <li><img src="imgs/mini-icon-phone.jpg" alt="" class="mini-icon"> +1-718-310-5588</li>
+    <li><img src="imgs/mini-icon-website.jpg" alt="" class="mini-icon"> www.yourwebsite.com</li>
+    <li><img src="imgs/mini-icon-location.jpg" alt="" class="mini-icon"> 769 PrudenceLincoln Park, MI</li>
+  </ul>
+</section>
+
+    <div class="sidebar-divider"></div>
+
+    <section>
+  <h2>
+  <img src="imgs/icon-education.jpg" alt="" class="section-icon">
+  EDUCATION
+  <button type="button" class="toggle-arrow" data-target="education-body"
+          aria-expanded="true" aria-controls="education-body"
+          aria-label="Згорнути або розгорнути: EDUCATION"></button>
+</h2>
+
+  <div class="section-body" id="education-body">
+    <div class="info-block">
+      <h3>STANFORD UNIVERSITY</h3>
+      <p class="detail">MASTER DEGREE GRADUATE</p>
+      <p class="detail">2011 - 2013</p>
+    </div>
+
+    <div class="info-block">
+      <h3>UNIVERSITY OF CHICAGO</h3>
+      <p class="detail">BACHELOR DEGREE GRADUATE</p>
+      <p class="detail">2007 - 2010</p>
+    </div>
+  </div>
+</section>
+
+    <div class="sidebar-divider"></div>
+
+    <section>
+  <h2>
+  <img src="imgs/icon-references.jpg" alt="" class="section-icon">
+  REFERENCES
+  <button type="button" class="toggle-arrow" data-target="references-body"
+          aria-expanded="true" aria-controls="references-body"
+          aria-label="Згорнути або розгорнути: REFERENCES"></button>
+</h2>
+
+  <div class="section-body" id="references-body">
+    <div class="info-block card border-0 bg-transparent">
+      <div class="card-body p-0">
+        <h3>DARWIN B. MAGANA</h3>
+        <p>2813 Shobe Lane Mancos, CO.</p>
+        <p>Tel: +1-970-533-3393</p>
+        <p>Email: www.yourwebsite.com</p>
+      </div>
+    </div>
+
+    <div class="info-block card border-0 bg-transparent">
+      <div class="card-body p-0">
+        <h3>ROBERT J. BELVIN</h3>
+        <p>2119 Fairfax Drive Newark, NJ.</p>
+        <p>Tel: +1-908-987-5103</p>
+        <p>Email: www.yourwebsite.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+
+</aside>
+      <main class="col-md-7">
+
+  <section>
+  <h2>
+  <img src="imgs/icon-amout_me.jpg" alt="" class="section-icon">
+  ABOUT ME
+  <button type="button" class="toggle-arrow" data-target="about-body"
+          aria-expanded="true" aria-controls="about-body"
+          aria-label="Згорнути або розгорнути: ABOUT ME"></button>
+</h2>
+
+  <div class="section-body" id="about-body">
+    <p class="about-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    </p>
+  </div>
+</section>
+
+  <hr class="section-divider">
+
+  <section>
+  <h2>
+  <img src="imgs/icon-job_experience.jpg" alt="" class="section-icon">
+  JOB EXPERIENCE
+  <button type="button" class="toggle-arrow" data-target="experience-body"
+          aria-expanded="true" aria-controls="experience-body"
+          aria-label="Згорнути або розгорнути: JOB EXPERIENCE"></button>
+</h2>
+
+  <div class="section-body" id="experience-body">
+    <div id="experience-list"></div>
+  </div>
+</section>
+
+  <hr class="section-divider">
+
+  <section>
+  <h2>
+  <img src="imgs/icon-skills.jpg" alt="" class="section-icon">
+  SKILLS
+  <button type="button" class="toggle-arrow" data-target="skills-body"
+          aria-expanded="true" aria-controls="skills-body"
+          aria-label="Згорнути або розгорнути: SKILLS"></button>
+</h2>
+
+  <div class="section-body" id="skills-body">
+    <div class="skills-grid row g-0" id="skills-list"></div>
+  </div>
+</section>
+
+  <hr class="section-divider">
+
+  <section class="lang-hobbies row g-0">
+
+  <div class="col-7 lang-col">
+    <h2>
+  <img src="imgs/icon-language.jpg" alt="" class="section-icon">
+  LANGUAGE
+  <button type="button" class="toggle-arrow" data-target="language-body"
+          aria-expanded="true" aria-controls="language-body"
+          aria-label="Згорнути або розгорнути: LANGUAGE"></button>
+</h2>
+
+    <div class="section-body" id="language-body">
+      <div class="compact-list compact-list--language row g-0">
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>ENGLISH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>SPANISH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>FRENCH</div>
+        <div class="col-6 compact-item"><span class="teal-bullet"></span>GERMAN</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-5 hobbies-col">
+    <h2>
+  <img src="imgs/icon-hobbies.jpg" alt="" class="section-icon">
+  HOBBIES
+  <button type="button" class="toggle-arrow" data-target="hobbies-body"
+          aria-expanded="true" aria-controls="hobbies-body"
+          aria-label="Згорнути або розгорнути: HOBBIES"></button>
+</h2>
+
+    <div class="section-body" id="hobbies-body">
+      <div class="compact-list row g-0">
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>READING BOOKS</div>
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>TRAVELING</div>
+        <div class="col-12 compact-item"><span class="teal-bullet"></span>PLAYING CHESS</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- Власні скрипти -->
+<script src="js/main.min.js"></script>
+</body>
+</html>

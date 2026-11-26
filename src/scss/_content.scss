@@ -16,6 +16,16 @@ main {
     margin-bottom: $heading-gap;
   }
 
+    // Стрілка в правій колонці притиснута до правого краю заголовка
+  h2 .toggle-arrow {
+    margin-left: auto;
+  }
+
+  // LANGUAGE і HOBBIES: там немає місця, стрілка лишається біля назви
+  .lang-hobbies h2 .toggle-arrow {
+    margin-left: $gap-small * -1;
+  }
+
   h3 {
     @extend %item-title;
   }
